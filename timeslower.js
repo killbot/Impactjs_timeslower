@@ -1,6 +1,25 @@
 //made by dave homan, @mrlasertron, while making drugbound
 //http://drugbound.com
 //Licenced under WTFPL
+/*-----------HOW TO USE------------
+1. include 'plugins.timeslower' in your relevant .requires() section.
+2. create a TimeSlower object:
+	myTimeSlower = new TimeSlower();
+3. include the timeslower update inside your game's update() method.
+	myTimeSlower.update();
+4. slow time briefly by implementing the alterTimeScale() method.
+	myTimeSlower.alterTimeScale(0.5, 4, 3, 2);
+	(the above code will take 4 seconds to slow down
+	to 0.5 timescale, stay at 0.5 timescale for 3 seconds, 
+	then return to timescale 1 gradually over 2 seconds.  
+	All gradual timescale changing is linear.) Arguments must be
+	0 or greater.
+ 
+--------------------------------*/
+
+
+
+
 ig.module(
     'plugins.timeslower'
 )
